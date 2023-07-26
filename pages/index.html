@@ -4,6 +4,38 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+  theme: {
+    extend: {
+      keyframes: {
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }  
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent"
+          },
+          "100%": {
+            borderColor: "white"
+          }  
+        }
+      },
+      animation: {
+        typing: "typing 2.5s steps(20) infinite alternate, blink .8s infinite"
+      }
+    },
+  },
+  plugins: [],
+}
+
+		  </script>
 	</head>
 	<body>
 		<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 z-50">
@@ -67,8 +99,10 @@
 			</div>
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="flex flex-wrap justify-center lg:justify-start">
-					<div class="text-center lg:text-left lg:basis-3/4 mb-4 lg:mb-0 lg:basis-3/4">
-						<h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Divyajyoti Ukirde</h2>
+					<div class="order-2 md:order-1 lg:basis-3/4 mb-4 lg:mb-0 lg:basis-3/4">
+						<div class="w-max mx-auto sm:mx-0 mt-8 sm:mt-0">
+							<h1 class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white font-bold tracking-tight text-white text-3xl pr-8 sm:text-6xl">Divyajyoti Ukirde</h1>
+						</div>
 						<p class="mt-6 text-lg font-semibold leading-8 text-white">
 							Hi, <br />
 							I am a Computer Science student at the University of Florida, who has developed a strong foundation in software development and
@@ -76,7 +110,7 @@
 							Malware Reverse Engineering, Penetration Testing & Ethical Hacking.
 						</p>
 					</div>
-					<div class="flex justify-center items-center lg:basis-1/4">
+					<div class="order-1 md:order-2 flex justify-center items-center lg:basis-1/4">
 						<img
 							src="https://github.com/divyajyotiuk/divyajyotiuk.github.io/assets/30872426/5a53a7c1-273d-4dfd-b89a-36cf28675836"
 							alt="Profile Pic"
@@ -109,7 +143,7 @@
 										></path></svg></span></span
 						></a>
 						<a
-							href="/documents/Divyajyoti_Ukirde_resume.pdf"
+							href="#work"
 							class="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
 							aria-label="WORK"
 							><span
@@ -326,9 +360,14 @@
 			</div>
 		</div>
 		<!-- EXPERIENCE -->
-		<div class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
-			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="group/item grid md:grid-cols-2 grid-cols-1 gap-20">
+		<div id="work" class="relative isolate overflow-hidden bg-gray-900 pb-16 sm:pb-24 lg:pb-32">
+			<div class="flex items-left justify-start ml-6 sm:items-center sm:justify-center py-10 sm:py-16">
+				<div class="w-max">
+				  <h1 class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-8 text-3xl sm:text-5xl text-white font-bold">Experience Counts!</h1>
+				</div>
+			  </div>
+			<div class="group/item mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid md:grid-cols-2 grid-cols-1 gap-20 md:gap-10 lg:gap-20">
 					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
 						<div
 							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
@@ -343,7 +382,7 @@
 										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
 										aria-label="Software Engineer">
 										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-										<span>Programmer (Intern)
+										<span>Programmer (Intern) · 
 											<span class="inline-block">
 												HHMI Biointeractive
 												<svg
@@ -368,31 +407,25 @@
 								</div>
 							</h3>
 							<p class="mt-2 text-sm text-slate-500 leading-normal">
-								Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown
-								for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering
-								department through close collaboration, knowledge shares, and mentorship.
+								Implemented version control system on Github for the interactive tool. Established a CI/CD staging environment on Netlify. 
+								Added new features and mitigated existing anti-patterns using advanced Javascript concepts.
+								Resolved accessibility and touchscreen issues improving overall functionality and user experience.
 							</p>
-							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+							<ul class="mt-2 flex flex-wrap" role="list" aria-label="Technologies used">
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">React</div>
-								</li>
-								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">React Native</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">ReactJS</div>
 								</li>
 								<li class="mr-1.5 mt-2">
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">SCSS</div>
 								</li>
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">WordPress</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Redux</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Webpack</div>
 								</li>
 								<li class="mr-1.5 mt-2">
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">JavaScript</div>
-								</li>
-								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">TypeScript</div>
-								</li>
-								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">PHP</div>
 								</li>
 							</ul>
 						</div>
@@ -405,15 +438,15 @@
 							<h3 class="font-medium leading-snug text-slate-200">
 								<div>
 									<a
-										href="https://www.biointeractive.org/classroom-resources/model-builder"
+										href="https://truesparrow.com/"
 										target="_blank"
 										rel="noreferrer"
 										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
 										aria-label="Software Engineer">
 										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-										<span>Programmer (Intern)
+										<span>Senior Software Engineer · 
 											<span class="inline-block">
-												HHMI Biointeractive
+												PLG Works - True Sparrow
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
 													viewBox="0 0 20 20"
@@ -432,41 +465,187 @@
 										</a>
 								</div>
 								<div>
-									<div class="text-slate-500" aria-hidden="true">May 2023 - Aug 2023</div>
+									<div class="text-slate-500" aria-hidden="true">May 2022 - Aug 2022</div>
 								</div>
 							</h3>
 							<p class="mt-2 text-sm text-slate-500 leading-normal">
-								Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown
-								for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering
-								department through close collaboration, knowledge shares, and mentorship.
+								Crafted boilerplate templates for 5 different frameworks/libraries, successfully built and deployed 3 secure and responsive websites. 
+								Created and launched "Slackmin" product, garnering 500+ votes and being featured on Product Hunt. 
+								Trained and guided 3+ junior developers.
 							</p>
 							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">React</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">ReactJS</div>
 								</li>
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">React Native</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">NextJS</div>
 								</li>
 								<li class="mr-1.5 mt-2">
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">SCSS</div>
 								</li>
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">WordPress</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">TailwindCSS</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">NodeJS</div>
 								</li>
 								<li class="mr-1.5 mt-2">
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">JavaScript</div>
 								</li>
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">TypeScript</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">VueJS</div>
 								</li>
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">PHP</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">NuxtJS</div>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="grid md:grid-cols-2 grid-cols-1 gap-20"></div>
+				<div class="mt-20 md:mt-10 lg:mt-20 grid md:grid-cols-2 grid-cols-1 gap-20 md:gap-10 lg:gap-20">
+					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
+						<div
+							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
+						</div>
+						<div class="z-10 sm:col-span-8">
+							<h3 class="font-medium leading-snug text-slate-200">
+								<div>
+									<a
+										href="https://truesparrow.com/#projects"
+										target="_blank"
+										rel="noreferrer"
+										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
+										aria-label="Software Engineer">
+										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+										<span>Software Engineer · 
+											<span class="inline-block">
+												Moxie - True Sparrow
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+													aria-hidden="true"
+												>
+													<path
+														fill-rule="evenodd"
+														d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+														clip-rule="evenodd">
+													</path>
+												</svg>
+											</span>
+											</span>
+										</a>
+								</div>
+								<div>
+									<div class="text-slate-500" aria-hidden="true">May 2020 - Apr 2022</div>
+								</div>
+							</h3>
+							<p class="mt-2 text-sm text-slate-500 leading-normal">
+								Developed features like the marketplace, on-demand videos, and payments for the virtual fitness platform with 
+								notable success in delivering the projects on time, attracting 100+ solo entrepreneurs. 
+								Leading and guiding teams to build complex UI. Conducted interviews of 5+ candidates for frontend roles. 
+							</p>
+							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">jQuery</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">JavaScript</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">React</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">SCSS</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Ajax</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Webpack</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Bootstrap</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">NodeJS</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
+						<div
+							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
+						</div>
+						<div class="z-10 sm:col-span-8">
+							<h3 class="font-medium leading-snug text-slate-200">
+								<div>
+									<a
+										href="https://github.com/openst"
+										target="_blank"
+										rel="noreferrer"
+										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
+										aria-label="Software Engineer">
+										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+										<span>Engineering Intern · 
+											<span class="inline-block">
+												OST Open Simple Token
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+													aria-hidden="true"
+												>
+													<path
+														fill-rule="evenodd"
+														d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+														clip-rule="evenodd">
+													</path>
+												</svg>
+											</span>
+											</span>
+										</a>
+								</div>
+								<div>
+									<div class="text-slate-500" aria-hidden="true">Jan 2020 - Apr 2020</div>
+								</div>
+							</h3>
+							<p class="mt-2 text-sm text-slate-500 leading-normal">
+								Leveraged JavaScript OOP principles to develop wrapper functions for OpenST’s Browser Wallet SDK. 
+								Created 3 levels of security using cryptographic algorithms for user API and session key management in the browser.
+								Designed and tested the workflows for Wallet SDK open source project.
+							</p>
+							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Solidity</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Geth</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">jQuery</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">JavaScript</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Web2.js</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">REST API</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">HTML</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">CSS</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
