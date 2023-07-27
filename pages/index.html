@@ -6,36 +6,35 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
 			tailwind.config = {
-  theme: {
-    extend: {
-      keyframes: {
-        typing: {
-          "0%": {
-            width: "0%",
-            visibility: "hidden"
-          },
-          "100%": {
-            width: "100%"
-          }  
-        },
-        blink: {
-          "50%": {
-            borderColor: "transparent"
-          },
-          "100%": {
-            borderColor: "white"
-          }  
-        }
-      },
-      animation: {
-        typing: "typing 2.5s steps(20) infinite alternate, blink .8s infinite"
-      }
-    },
-  },
-  plugins: [],
-}
-
-		  </script>
+				theme: {
+					extend: {
+						keyframes: {
+							typing: {
+								'0%': {
+									width: '0%',
+									visibility: 'hidden',
+								},
+								'100%': {
+									width: '100%',
+								},
+							},
+							blink: {
+								'50%': {
+									borderColor: 'transparent',
+								},
+								'100%': {
+									borderColor: 'white',
+								},
+							},
+						},
+						animation: {
+							typing: 'typing 2.5s steps(20) infinite alternate, blink .8s infinite',
+						},
+					},
+				},
+				plugins: [],
+			};
+		</script>
 	</head>
 	<body>
 		<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 z-50">
@@ -101,7 +100,11 @@
 				<div class="flex flex-wrap justify-center lg:justify-start">
 					<div class="order-2 md:order-1 lg:basis-3/4 mb-4 lg:mb-0 lg:basis-3/4">
 						<div class="w-max mx-auto sm:mx-0 mt-8 sm:mt-0">
-							<h1 class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white font-bold tracking-tight text-white text-3xl pr-8 sm:text-6xl">Divyajyoti Ukirde</h1>
+							<h1
+								class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white font-bold tracking-tight text-white text-3xl pr-8 sm:text-6xl"
+							>
+								Divyajyoti Ukirde
+							</h1>
 						</div>
 						<p class="mt-6 text-lg font-semibold leading-8 text-white">
 							Hi, <br />
@@ -363,15 +366,17 @@
 		<div id="work" class="relative isolate overflow-hidden bg-gray-900 pb-16 sm:pb-24 lg:pb-32">
 			<div class="flex items-left justify-start ml-6 sm:items-center sm:justify-center py-10 sm:py-16">
 				<div class="w-max">
-				  <h1 class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-8 text-3xl sm:text-5xl text-white font-bold">Experience Counts!</h1>
+					<h1 class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-8 text-3xl sm:text-5xl text-white font-bold">
+						Experience Counts!
+					</h1>
 				</div>
-			  </div>
+			</div>
 			<div class="group/item mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="grid md:grid-cols-2 grid-cols-1 gap-20 md:gap-10 lg:gap-20">
 					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
 						<div
-							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
-						</div>
+							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+						></div>
 						<div class="z-10 sm:col-span-8">
 							<h3 class="font-medium leading-snug text-slate-200">
 								<div>
@@ -380,9 +385,11 @@
 										target="_blank"
 										rel="noreferrer"
 										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
-										aria-label="Software Engineer">
+										aria-label="Software Engineer"
+									>
 										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-										<span>Programmer (Intern) · 
+										<span
+											>Programmer (Intern) ·
 											<span class="inline-block">
 												HHMI Biointeractive
 												<svg
@@ -395,21 +402,21 @@
 													<path
 														fill-rule="evenodd"
 														d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-														clip-rule="evenodd">
-													</path>
+														clip-rule="evenodd"
+													></path>
 												</svg>
 											</span>
-											</span>
-										</a>
+										</span>
+									</a>
 								</div>
 								<div>
 									<div class="text-slate-500" aria-hidden="true">May 2023 - Aug 2023</div>
 								</div>
 							</h3>
 							<p class="mt-2 text-sm text-slate-500 leading-normal">
-								Implemented version control system on Github for the interactive tool. Established a CI/CD staging environment on Netlify. 
-								Added new features and mitigated existing anti-patterns using advanced Javascript concepts.
-								Resolved accessibility and touchscreen issues improving overall functionality and user experience.
+								Implemented version control system on Github for the interactive tool. Established a CI/CD staging environment on Netlify. Added new
+								features and mitigated existing anti-patterns using advanced Javascript concepts. Resolved accessibility and touchscreen issues
+								improving overall functionality and user experience.
 							</p>
 							<ul class="mt-2 flex flex-wrap" role="list" aria-label="Technologies used">
 								<li class="mr-1.5 mt-2">
@@ -425,15 +432,17 @@
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Webpack</div>
 								</li>
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">JavaScript</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
+										JavaScript
+									</div>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
 						<div
-							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
-						</div>
+							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+						></div>
 						<div class="z-10 sm:col-span-8">
 							<h3 class="font-medium leading-snug text-slate-200">
 								<div>
@@ -442,9 +451,11 @@
 										target="_blank"
 										rel="noreferrer"
 										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
-										aria-label="Software Engineer">
+										aria-label="Software Engineer"
+									>
 										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-										<span>Senior Software Engineer · 
+										<span
+											>Senior Software Engineer ·
 											<span class="inline-block">
 												PLG Works - True Sparrow
 												<svg
@@ -457,21 +468,21 @@
 													<path
 														fill-rule="evenodd"
 														d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-														clip-rule="evenodd">
-													</path>
+														clip-rule="evenodd"
+													></path>
 												</svg>
 											</span>
-											</span>
-										</a>
+										</span>
+									</a>
 								</div>
 								<div>
 									<div class="text-slate-500" aria-hidden="true">May 2022 - Aug 2022</div>
 								</div>
 							</h3>
 							<p class="mt-2 text-sm text-slate-500 leading-normal">
-								Crafted boilerplate templates for 5 different frameworks/libraries, successfully built and deployed 3 secure and responsive websites. 
-								Created and launched "Slackmin" product, garnering 500+ votes and being featured on Product Hunt. 
-								Trained and guided 3+ junior developers.
+								Crafted boilerplate templates for 5 different frameworks/libraries, successfully built and deployed 3 secure and responsive websites.
+								Created and launched "Slackmin" product, garnering 500+ votes and being featured on Product Hunt. Trained and guided 3+ junior
+								developers.
 							</p>
 							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
 								<li class="mr-1.5 mt-2">
@@ -484,13 +495,17 @@
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">SCSS</div>
 								</li>
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">TailwindCSS</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
+										TailwindCSS
+									</div>
 								</li>
 								<li class="mr-1.5 mt-2">
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">NodeJS</div>
 								</li>
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">JavaScript</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
+										JavaScript
+									</div>
 								</li>
 								<li class="mr-1.5 mt-2">
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">VueJS</div>
@@ -505,8 +520,8 @@
 				<div class="mt-20 md:mt-10 lg:mt-20 grid md:grid-cols-2 grid-cols-1 gap-20 md:gap-10 lg:gap-20">
 					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
 						<div
-							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
-						</div>
+							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+						></div>
 						<div class="z-10 sm:col-span-8">
 							<h3 class="font-medium leading-snug text-slate-200">
 								<div>
@@ -515,9 +530,11 @@
 										target="_blank"
 										rel="noreferrer"
 										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
-										aria-label="Software Engineer">
+										aria-label="Software Engineer"
+									>
 										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-										<span>Software Engineer · 
+										<span
+											>Software Engineer ·
 											<span class="inline-block">
 												Moxie - True Sparrow
 												<svg
@@ -530,28 +547,30 @@
 													<path
 														fill-rule="evenodd"
 														d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-														clip-rule="evenodd">
-													</path>
+														clip-rule="evenodd"
+													></path>
 												</svg>
 											</span>
-											</span>
-										</a>
+										</span>
+									</a>
 								</div>
 								<div>
 									<div class="text-slate-500" aria-hidden="true">May 2020 - Apr 2022</div>
 								</div>
 							</h3>
 							<p class="mt-2 text-sm text-slate-500 leading-normal">
-								Developed features like the marketplace, on-demand videos, and payments for the virtual fitness platform with 
-								notable success in delivering the projects on time, attracting 100+ solo entrepreneurs. 
-								Leading and guiding teams to build complex UI. Conducted interviews of 5+ candidates for frontend roles. 
+								Developed features like the marketplace, on-demand videos, and payments for the virtual fitness platform with notable success in
+								delivering the projects on time, attracting 100+ solo entrepreneurs. Leading and guiding teams to build complex UI. Conducted
+								interviews of 5+ candidates for frontend roles.
 							</p>
 							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
 								<li class="mr-1.5 mt-2">
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">jQuery</div>
 								</li>
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">JavaScript</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
+										JavaScript
+									</div>
 								</li>
 								<li class="mr-1.5 mt-2">
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">React</div>
@@ -576,8 +595,8 @@
 					</div>
 					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
 						<div
-							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
-						</div>
+							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+						></div>
 						<div class="z-10 sm:col-span-8">
 							<h3 class="font-medium leading-snug text-slate-200">
 								<div>
@@ -586,9 +605,11 @@
 										target="_blank"
 										rel="noreferrer"
 										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
-										aria-label="Software Engineer">
+										aria-label="Software Engineer"
+									>
 										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-										<span>Engineering Intern · 
+										<span
+											>Engineering Intern ·
 											<span class="inline-block">
 												OST Open Simple Token
 												<svg
@@ -601,21 +622,21 @@
 													<path
 														fill-rule="evenodd"
 														d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-														clip-rule="evenodd">
-													</path>
+														clip-rule="evenodd"
+													></path>
 												</svg>
 											</span>
-											</span>
-										</a>
+										</span>
+									</a>
 								</div>
 								<div>
 									<div class="text-slate-500" aria-hidden="true">Jan 2020 - Apr 2020</div>
 								</div>
 							</h3>
 							<p class="mt-2 text-sm text-slate-500 leading-normal">
-								Leveraged JavaScript OOP principles to develop wrapper functions for OpenST’s Browser Wallet SDK. 
-								Created 3 levels of security using cryptographic algorithms for user API and session key management in the browser.
-								Designed and tested the workflows for Wallet SDK open source project.
+								Leveraged JavaScript OOP principles to develop wrapper functions for OpenST’s Browser Wallet SDK. Created 3 levels of security using
+								cryptographic algorithms for user API and session key management in the browser. Designed and tested the workflows for Wallet SDK open
+								source project.
 							</p>
 							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
 								<li class="mr-1.5 mt-2">
@@ -628,7 +649,9 @@
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">jQuery</div>
 								</li>
 								<li class="mr-1.5 mt-2">
-									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">JavaScript</div>
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
+										JavaScript
+									</div>
 								</li>
 								<li class="mr-1.5 mt-2">
 									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Web2.js</div>
@@ -651,10 +674,15 @@
 
 		<!-- PROJECTS -->
 		<div class="relative isolate px-6 py-14 lg:px-8">
-			<div class="inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-				<div
-					class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#f3977d] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-					style="
+			<div class="flex items-left justify-start ml-6 sm:items-center sm:justify-center py-10 sm:py-16">
+				<div class="w-max">
+					<h1 class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-black pr-8 text-3xl sm:text-5xl text-black font-bold">
+						Projects
+					</h1>
+				</div>
+			</div>
+			<div class="absolute inset-x-0 -top-20 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-20" aria-hidden="true">
+				<div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#f3977d] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="
 						clip-path: polygon(
 							74.1% 44.1%,
 							100% 61.6%,
@@ -673,10 +701,42 @@
 							76.1% 97.7%,
 							74.1% 44.1%
 						);
-					"
-				></div>
+					"></div>
 			</div>
-			<div class="mx-auto"></div>
+			<div class="mx-auto">
+				<div class="grid md:grid-cols-2 grid-cols-1 lg:px-20">
+					<div class="">
+						<img class="rounded-md shadow-lg w-600 h-325" width="1653" alt="GRE Vocabulary Flashcards" src="https://github-production-user-asset-6210df.s3.amazonaws.com/30872426/256677981-fd238a6f-b13a-4bca-89fd-c0994479ec49.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230727%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230727T223044Z&X-Amz-Expires=300&X-Amz-Signature=9814ac4a90a4fad25b1a6de71a707a8670a1796677d4e01c1f06609735672ea9&X-Amz-SignedHeaders=host&actor_id=30872426&key_id=0&repo_id=333023216">
+					</div>
+					<div class="md:text-right text-center p-6 md:p-12">
+						<h2 class="text-xl font-bold">GRE Vocabulary Flashcards</h2>
+						<div class="rounded-md shadow-lg mt-4 md:-ml-20 bg-white p-4">
+							A web app for practicing GRE Vocab words. A personal project for when I was preparing for my GRE exam. It loads words from csv files.
+						</div>
+						<ul class="mt-4 flex flex-wrap justify-center md:justify-end" aria-label="Technologies used">
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">NextJS</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">TailwindCSS</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">Vercel</div>
+							</li>
+						</ul>
+						<div class="flex justify-center md:justify-end items-end">
+							<a class="block transition transform hover:scale-110 duration-100 rounded-md bg-white/5 p-2 m-2 ring-1 ring-white/10" href="https://github.com/divyajyotiuk/gre-vocab" target="_blank" rel="noreferrer">
+								<span class="sr-only">GitHub</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+							</a>
+							<a class="block transition transform hover:scale-110 duration-100 rounded-md bg-white/5 p-2 m-2 ring-1 ring-white/10" href="https://gre-vocab-divyajyotiuk.vercel.app/csvs/VocabET1" target="_blank" rel="noreferrer">
+								<span class="sr-only">GitHub</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!-- FOOTER       -->
 
