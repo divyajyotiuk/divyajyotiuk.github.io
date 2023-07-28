@@ -4,6 +4,67 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						keyframes: {
+							typing: {
+								'0%': {
+									width: '0%',
+									visibility: 'hidden',
+								},
+								'100%': {
+									width: '100%',
+								},
+							},
+							blink: {
+								'50%': {
+									borderColor: 'transparent',
+								},
+								'100%': {
+									borderColor: 'white',
+								},
+							},
+							text: {
+								'0%, 100%': {
+									'background-size': '200% 200%',
+									'background-position': 'left center',
+								},
+								'50%': {
+									'background-size': '200% 200%',
+									'background-position': 'right center',
+								},
+							},
+						},
+						animation: {
+							typing: 'typing 2.5s steps(20) 1 alternate, blink .8s infinite',
+							text: 'text 3s ease infinite',
+						},
+					},
+				},
+				plugins: [],
+			};
+		</script>
+		<style>
+			.link-underline {
+				border-bottom-width: 0;
+				background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+				background-size: 0 1px;
+				background-position: 0 100%;
+				background-repeat: no-repeat;
+				transition: background-size .5s ease-in-out;
+			}
+		
+			.link-underline-black {
+				background-image: linear-gradient(transparent, transparent), linear-gradient(#ee7371, #ee7371)
+			}
+		
+			.link-underline:hover {
+				background-size: 100% 1px;
+				background-position: 0 100%
+			}
+		</style>
 	</head>
 	<body>
 		<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 z-50">
@@ -67,8 +128,14 @@
 			</div>
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="flex flex-wrap justify-center lg:justify-start">
-					<div class="text-center lg:text-left lg:basis-3/4 mb-4 lg:mb-0 lg:basis-3/4">
-						<h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Divyajyoti Ukirde</h2>
+					<div class="order-2 md:order-1 lg:basis-3/4 mb-4 lg:mb-0 lg:basis-3/4">
+						<div class="w-max mx-auto sm:mx-0 mt-8 sm:mt-0">
+							<h1
+								class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white font-bold tracking-tight text-white text-3xl pr-8 sm:text-6xl"
+							>
+								Divyajyoti Ukirde
+							</h1>
+						</div>
 						<p class="mt-6 text-lg font-semibold leading-8 text-white">
 							Hi, <br />
 							I am a Computer Science student at the University of Florida, who has developed a strong foundation in software development and
@@ -76,7 +143,7 @@
 							Malware Reverse Engineering, Penetration Testing & Ethical Hacking.
 						</p>
 					</div>
-					<div class="flex justify-center items-center lg:basis-1/4">
+					<div class="order-1 md:order-2 flex justify-center items-center lg:basis-1/4">
 						<img
 							src="https://github.com/divyajyotiuk/divyajyotiuk.github.io/assets/30872426/5a53a7c1-273d-4dfd-b89a-36cf28675836"
 							alt="Profile Pic"
@@ -94,7 +161,7 @@
 							><span
 								><span class="border-b border-transparent pb-px transition group-hover:border-white motion-reduce:transition-none">SKILLS</span
 								><span class="whitespace-nowrap"
-									><span class="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none"></span
+									><span class="border-b border-transparent pb-px transition group-hover:border-indigo-300 motion-reduce:transition-none"></span
 									><svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 20 20"
@@ -109,14 +176,14 @@
 										></path></svg></span></span
 						></a>
 						<a
-							href="/documents/Divyajyoti_Ukirde_resume.pdf"
+							href="#work"
 							class="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
 							aria-label="WORK"
 							><span
 								><span class="border-b border-transparent pb-px transition group-hover:border-white motion-reduce:transition-none"
 									>WORK EXPERIENCE</span
 								><span class="whitespace-nowrap"
-									><span class="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none"></span
+									><span class="border-b border-transparent pb-px transition group-hover:border-indigo-300 motion-reduce:transition-none"></span
 									><svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 20 20"
@@ -131,13 +198,13 @@
 										></path></svg></span></span
 						></a>
 						<a
-							href="https://github.com/divyajyotiuk"
+							href="#projects"
 							class="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
 							aria-label="PROJECTS"
 							><span
 								><span class="border-b border-transparent pb-px transition group-hover:border-white motion-reduce:transition-none">PROJECTS</span
 								><span class="whitespace-nowrap"
-									><span class="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none"></span
+									><span class="border-b border-transparent pb-px transition group-hover:border-indigo-300 motion-reduce:transition-none"></span
 									><svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 20 20"
@@ -151,7 +218,7 @@
 											clip-rule="evenodd"
 										></path></svg></span></span
 						></a>
-						<!-- <a href="#awards" class="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group" aria-label="AWARDS & LEADERSHIP"><span><span class="border-b border-transparent pb-px transition group-hover:border-white motion-reduce:transition-none">AWARDS & LEADERSHIP</span><span class="whitespace-nowrap"><span class="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none"></span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path></svg></span></span></a> -->
+						<!-- <a href="#awards" class="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group" aria-label="AWARDS & LEADERSHIP"><span><span class="border-b border-transparent pb-px transition group-hover:border-white motion-reduce:transition-none">AWARDS & LEADERSHIP</span><span class="whitespace-nowrap"><span class="border-b border-transparent pb-px transition group-hover:border-indigo-300 motion-reduce:transition-none"></span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path></svg></span></span></a> -->
 					</div>
 				</div>
 			</div>
@@ -325,7 +392,463 @@
 				</div>
 			</div>
 		</div>
+		<!-- EXPERIENCE -->
+		<div id="work" class="relative isolate overflow-hidden bg-gray-900 pb-16 sm:pb-24 lg:pb-32">
+			<div class="flex items-left justify-start ml-6 sm:items-center sm:justify-center py-10 sm:py-16">
+				<div class="w-max">
+					<h1 class="animate-text bg-gradient-to-r from-teal-500 via-indigo-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black">
+						Work Experience
+					</h1>
+				</div>
+			</div>
+			<div class="group/item mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid md:grid-cols-2 grid-cols-1 gap-20 md:gap-10 lg:gap-20">
+					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
+						<div
+							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+						></div>
+						<div class="z-10 sm:col-span-8">
+							<h3 class="font-medium leading-snug text-slate-200">
+								<div>
+									<a
+										href="https://www.biointeractive.org/classroom-resources/model-builder"
+										target="_blank"
+										rel="noreferrer"
+										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
+										aria-label="Software Engineer"
+									>
+										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+										<span
+											>Programmer (Intern) ·
+											<span class="inline-block">
+												HHMI Biointeractive
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+													aria-hidden="true"
+												>
+													<path
+														fill-rule="evenodd"
+														d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+														clip-rule="evenodd"
+													></path>
+												</svg>
+											</span>
+										</span>
+									</a>
+								</div>
+								<div>
+									<div class="text-slate-500" aria-hidden="true">May 2023 - Aug 2023</div>
+								</div>
+							</h3>
+							<p class="mt-2 text-sm text-slate-500 leading-normal">
+								Implemented version control system on Github for the interactive tool. Established a CI/CD staging environment on Netlify. Added new
+								features and mitigated existing anti-patterns using advanced Javascript concepts. Resolved accessibility and touchscreen issues
+								improving overall functionality and user experience.
+							</p>
+							<ul class="mt-2 flex flex-wrap" role="list" aria-label="Technologies used">
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">ReactJS</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">SCSS</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Redux</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Webpack</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
+										JavaScript
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
+						<div
+							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+						></div>
+						<div class="z-10 sm:col-span-8">
+							<h3 class="font-medium leading-snug text-slate-200">
+								<div>
+									<a
+										href="https://truesparrow.com/"
+										target="_blank"
+										rel="noreferrer"
+										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
+										aria-label="Software Engineer"
+									>
+										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+										<span
+											>Senior Software Engineer ·
+											<span class="inline-block">
+												PLG Works - True Sparrow
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+													aria-hidden="true"
+												>
+													<path
+														fill-rule="evenodd"
+														d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+														clip-rule="evenodd"
+													></path>
+												</svg>
+											</span>
+										</span>
+									</a>
+								</div>
+								<div>
+									<div class="text-slate-500" aria-hidden="true">May 2022 - Aug 2022</div>
+								</div>
+							</h3>
+							<p class="mt-2 text-sm text-slate-500 leading-normal">
+								Crafted boilerplate templates for 5 different frameworks/libraries, successfully built and deployed 3 secure and responsive websites.
+								Created and launched "Slackmin" product, garnering 500+ votes and being featured on Product Hunt. Trained and guided 3+ junior
+								developers.
+							</p>
+							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">ReactJS</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">NextJS</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">SCSS</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
+										TailwindCSS
+									</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">NodeJS</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
+										JavaScript
+									</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">VueJS</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">NuxtJS</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="mt-20 md:mt-10 lg:mt-20 grid md:grid-cols-2 grid-cols-1 gap-20 md:gap-10 lg:gap-20">
+					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
+						<div
+							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+						></div>
+						<div class="z-10 sm:col-span-8">
+							<h3 class="font-medium leading-snug text-slate-200">
+								<div>
+									<a
+										href="https://truesparrow.com/#projects"
+										target="_blank"
+										rel="noreferrer"
+										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
+										aria-label="Software Engineer"
+									>
+										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+										<span
+											>Software Engineer ·
+											<span class="inline-block">
+												Moxie - True Sparrow
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+													aria-hidden="true"
+												>
+													<path
+														fill-rule="evenodd"
+														d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+														clip-rule="evenodd"
+													></path>
+												</svg>
+											</span>
+										</span>
+									</a>
+								</div>
+								<div>
+									<div class="text-slate-500" aria-hidden="true">May 2020 - Apr 2022</div>
+								</div>
+							</h3>
+							<p class="mt-2 text-sm text-slate-500 leading-normal">
+								Developed features like the marketplace, on-demand videos, and payments for the virtual fitness platform with notable success in
+								delivering the projects on time, attracting 100+ solo entrepreneurs. Leading and guiding teams to build complex UI. Conducted
+								interviews of 5+ candidates for frontend roles.
+							</p>
+							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">jQuery</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
+										JavaScript
+									</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">React</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">SCSS</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Ajax</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Webpack</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Bootstrap</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">NodeJS</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50">
+						<div
+							class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+						></div>
+						<div class="z-10 sm:col-span-8">
+							<h3 class="font-medium leading-snug text-slate-200">
+								<div>
+									<a
+										href="https://github.com/openst"
+										target="_blank"
+										rel="noreferrer"
+										class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-indigo-300 focus-visible:text-indigo-300 group/link text-base"
+										aria-label="Software Engineer"
+									>
+										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+										<span
+											>Engineering Intern ·
+											<span class="inline-block">
+												OST Open Simple Token
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+													fill="currentColor"
+													class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+													aria-hidden="true"
+												>
+													<path
+														fill-rule="evenodd"
+														d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+														clip-rule="evenodd"
+													></path>
+												</svg>
+											</span>
+										</span>
+									</a>
+								</div>
+								<div>
+									<div class="text-slate-500" aria-hidden="true">Jan 2020 - Apr 2020</div>
+								</div>
+							</h3>
+							<p class="mt-2 text-sm text-slate-500 leading-normal">
+								Leveraged JavaScript OOP principles to develop wrapper functions for OpenST’s Browser Wallet SDK. Created 3 levels of security using
+								cryptographic algorithms for user API and session key management in the browser. Designed and tested the workflows for Wallet SDK open
+								source project.
+							</p>
+							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Solidity</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Geth</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">jQuery</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
+										JavaScript
+									</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">Web2.js</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">REST API</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">HTML</div>
+								</li>
+								<li class="mr-1.5 mt-2">
+									<div class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">CSS</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<!-- PROJECTS -->
+		<div id="projects" class="relative isolate px-6 py-14 lg:px-8">
+			<div class="flex items-left justify-start ml-6 sm:items-center sm:justify-center py-10 sm:py-16">
+				<div class="w-max">
+					<h1 class="animate-text bg-gradient-to-r from-teal-500 via-indigo-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black uppercase">
+						Projects
+					</h1>
+				</div>
+			</div>
+			<div class="absolute inset-x-0 -top-20 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-20" aria-hidden="true">
+				<div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#f3977d] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="
+						clip-path: polygon(
+							74.1% 44.1%,
+							100% 61.6%,
+							97.5% 26.9%,
+							85.5% 0.1%,
+							80.7% 2%,
+							72.5% 32.5%,
+							60.2% 62.4%,
+							52.4% 68.1%,
+							47.5% 58.3%,
+							45.2% 34.5%,
+							27.5% 76.7%,
+							0.1% 64.9%,
+							17.9% 100%,
+							27.6% 76.8%,
+							76.1% 97.7%,
+							74.1% 44.1%
+						);
+					"></div>
+			</div>
+			<div class="mx-auto">
+				<div class="grid md:grid-cols-2 grid-cols-1 lg:px-20">
+					<div class="">
+						<img class="rounded-md shadow-lg w-600 h-325" width="1653" alt="GRE Vocabulary Flashcards" 
+						src="/assets/images/slackmin.png">
+					</div>
+					<div class="md:text-right text-center p-6 md:p-12">
+						<h2 class="text-xl font-bold">Slackmin</h2>
+						<div class="rounded-md shadow-lg mt-4 md:-ml-20 bg-white p-4">
+							Slack tool for Business Ops 
+							<a class="text-[#ee7371]" href="https://www.producthunt.com/products/slackmin" target="_blank" rel="noopener noreferrer">
+								<span class="link link-underline link-underline-black"> (Won #1 Product of the Day on Product Hunt) </span>
+							</a>. 
+							Slackmin streamlines Slack integration in Node.js applications by enabling custom tool creation to manage content, orders, reports, customers, and more.
+							Product page is developed with NuxtJS.
+						</div>
+						<ul class="mt-4 flex flex-wrap justify-center md:justify-end" aria-label="Technologies used">
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">NuxtJS</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">NodeJS</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">Slack API</div>
+							</li>
+						</ul>
+						<div class="flex justify-center md:justify-end items-end">
+							<a class="block transition transform hover:scale-110 duration-100 rounded-md bg-white/5 p-2 m-2 ring-1 ring-white/10" href="https://github.com/TrueSparrowSystems/slackmin" target="_blank" rel="noreferrer">
+								<span class="sr-only">GitHub</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+							</a>
+							<a class="block transition transform hover:scale-110 duration-100 rounded-md bg-white/5 p-2 m-2 ring-1 ring-white/10" href="https://truesparrow.com/slackmin" target="_blank" rel="noreferrer">
+								<span class="sr-only">GitHub</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="mt-10 grid md:grid-cols-2 grid-cols-1 lg:px-20">
+					<div class="relative order-2 md:order-1 md:text-left text-center p-6 md:p-12">
+						<h2 class="text-xl font-bold">GRE Vocabulary Flashcards</h2>
+						<div class="rounded-md shadow-lg mt-4 md:-mr-20 bg-white p-4">
+							A web app for practicing GRE Vocab words. A personal project for when I was preparing for my GRE exam. It loads words from csv files.
+						</div>
+						<ul class="mt-4 flex flex-wrap justify-center md:justify-start" aria-label="Technologies used">
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">NextJS</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">TailwindCSS</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">Vercel</div>
+							</li>
+						</ul>
+						<div class="flex justify-center md:justify-start items-end">
+							<a class="block transition transform hover:scale-110 duration-100 rounded-md bg-white/5 p-2 m-2 ring-1 ring-white/10" href="https://github.com/divyajyotiuk/gre-vocab" target="_blank" rel="noreferrer">
+								<span class="sr-only">GitHub</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+							</a>
+							<a class="block transition transform hover:scale-110 duration-100 rounded-md bg-white/5 p-2 m-2 ring-1 ring-white/10" href="https://gre-vocab-divyajyotiuk.vercel.app/csvs/VocabET1" target="_blank" rel="noreferrer">
+								<span class="sr-only">GitHub</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+							</a>
+						</div>
+					</div>
+					<div class="order-1 md:order-2">
+						<img class="shadow-lg w-600 h-325" width="1653" alt="GRE Vocabulary Flashcards" 
+						src="/assets/images/gre-vocab.png">
+					</div>
+				</div>
+				<div class="mt-10 grid md:grid-cols-2 grid-cols-1 lg:px-20">
+					<div class="">
+						<img class="rounded-md shadow-lg w-600 h-325" width="1653" alt="GRE Vocabulary Flashcards" 
+						src="/assets/images/swift-transfer.png">
+					</div>
+					<div class="md:text-right text-center p-6 md:p-12">
+						<h2 class="text-xl font-bold">Swift Transfer</h2>
+						<div class="rounded-md shadow-lg mt-4 md:-ml-20 bg-white p-4">
+							An E-wallet for making international transactions faster and cheaper. Wallet to Wallet International transaction details will be stored on blockchain.
+						</div>
+						<ul class="mt-4 flex flex-wrap justify-center md:justify-end" aria-label="Technologies used">
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">Android SDK</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">Java</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">Firebase</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">Pokt Core</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">Exchange Rate API</div>
+							</li>
+							<li class="mr-1.5 mt-2">
+								<div class="flex items-center rounded-full bg-[#ee7371] px-3 py-1 text-xs font-medium leading-5 text-white">Solidity</div>
+							</li>
+						</ul>
+						<div class="flex justify-center md:justify-end items-end">
+							<a class="block transition transform hover:scale-110 duration-100 rounded-md bg-white/5 p-2 m-2 ring-1 ring-white/10" href="https://github.com/divyajyotiuk/Swift-Transfer" target="_blank" rel="noreferrer">
+								<span class="sr-only">GitHub</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+							</a>
+							<a class="block transition transform hover:scale-110 duration-100 rounded-md bg-white/5 p-2 m-2 ring-1 ring-white/10" href="https://devfolio.co/projects/swift-transfer" target="_blank" rel="noreferrer">
+								<span class="sr-only">External Link</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- FOOTER       -->
 
 		<div class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
@@ -344,12 +867,14 @@
 								aria-label="View Full Résumé"
 								target="_blank"
 								href="/documents/Divyajyoti_Ukirde_resume.pdf"
-								><span
-									><span class="border-b border-transparent pb-px transition group-hover:border-white motion-reduce:transition-none"
-										>View Full<!-- --> </span
-									><span class="whitespace-nowrap"
-										><span class="border-b border-transparent pb-px transition group-hover:border-white motion-reduce:transition-none">Résumé</span
-										><svg
+							>
+								<span>
+									<span class="border-b border-transparent pb-px transition group-hover:border-white motion-reduce:transition-none">
+										View Full<!-- -->
+									</span>
+									<span class="whitespace-nowrap">
+										<span class="border-b border-transparent pb-px transition group-hover:border-white motion-reduce:transition-none">Résumé</span>
+										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 20 20"
 											fill="currentColor"
@@ -360,8 +885,11 @@
 												fill-rule="evenodd"
 												d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
 												clip-rule="evenodd"
-											></path></svg></span></span
-							></a>
+											></path>
+										</svg>
+									</span>
+								</span>
+							</a>
 						</div>
 					</div>
 					<div class="grid grid-cols-1 gap-x-8">
@@ -384,8 +912,9 @@
 								href="https://www.linkedin.com/in/divyajyotiuk/"
 								target="_blank"
 								rel="noreferrer"
-								><span class="sr-only">LinkedIn</span
-								><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="h-6 w-6" aria-hidden="true">
+							>
+								<span class="sr-only">LinkedIn</span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="h-6 w-6" aria-hidden="true">
 									<path
 										d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
 									></path>
@@ -396,8 +925,9 @@
 								href="https://twitter.com/divyajyotiuk"
 								target="_blank"
 								rel="noreferrer"
-								><span class="sr-only">Twitter</span
-								><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 204" fill="white" class="h-6 w-6" aria-hidden="true">
+							>
+								<span class="sr-only">Twitter</span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 204" fill="white" class="h-6 w-6" aria-hidden="true">
 									<path
 										id="white_background"
 										d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04   C50.97,201.51,24.1,193.65,1,178.83c3.99,0.48,8,0.72,12.02,0.73c22.74,0.02,44.83-7.61,62.72-21.66   c-21.61-0.41-40.56-14.5-47.18-35.07c7.57,1.46,15.37,1.16,22.8-0.87C27.8,117.2,10.85,96.5,10.85,72.46c0-0.22,0-0.43,0-0.64   c7.02,3.91,14.88,6.08,22.92,6.32C11.58,63.31,4.74,33.79,18.14,10.71c25.64,31.55,63.47,50.73,104.08,52.76   c-4.07-17.54,1.49-35.92,14.61-48.25c20.34-19.12,52.33-18.14,71.45,2.19c11.31-2.23,22.15-6.38,32.07-12.26   c-3.77,11.69-11.66,21.62-22.2,27.93c10.01-1.18,19.79-3.86,29-7.95C240.37,35.29,231.83,44.14,221.95,51.29z"
